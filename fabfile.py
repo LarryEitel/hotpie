@@ -31,3 +31,7 @@ def update_remote():
     
     with cd(fab['PROJECT_ROOT']):
         run('git pull origin master') # pull from repository to remote
+
+def deploy(msg="No Msg"):
+    commit(msg)
+    update_remote()     
